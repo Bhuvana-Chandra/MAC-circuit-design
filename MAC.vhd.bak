@@ -1,0 +1,27 @@
+library std;
+use std.standard.all;
+library ieee;
+use ieee.std_logic_1164.all;
+library ieee;
+use ieee.numeric_std.all; 
+library work;
+use work.given_gates.all;
+
+entity MAC is
+port( A,B: in std_logic_vector(7 downto 0); C:in std_logic_vector(15 downto 0);
+out_sum: out std_logic_vector(15 downto 0); out_carry : out std_logic);
+end entity MAC;
+architecture design of MAC is
+signal a7b0,a6b0,a5b0,a4b0,a3b0,a2b0,a1b0,a0b0:std_logic;
+signal a7b1,a6b1,a5b1,a4b1,a3b1,a2b1,a1b1,a0b1:std_logic;
+signal a7b2,a6b2,a5b2,a4b2,a3b2,a2b2,a1b2,a0b2:std_logic;
+signal a7b3,a6b3,a5b3,a4b3,a3b3,a2b3,a1b3,a0b3:std_logic;
+signal a7b4,a6b4,a5b4,a4b4,a3b4,a2b4,a1b4,a0b4:std_logic;
+signal a7b5,a6b5,a5b5,a4b5,a3b5,a2b5,a1b5,a0b5:std_logic;
+signal a7b6,a6b6,a5b6,a4b6,a3b6,a2b6,a1b6,a0b6:std_logic;
+signal a7b7,a6b7,a5b7,a4b7,a3b7,a2b7,a1b7,a0b7:std_logic;
+signal h1s,h1c,h2s,h2c,h3s,h3c,h4s,h4c,h5s,h5c,h6s,h6c,h7s,h7c,h8s,h8c,h9s,h9c,h10s,h10c,h11s,h11c,h12s,h12c,h13s,h13c,h14s,h14c:std_logic;
+signal f1s,f1c,f2s,f2c,f3s,f3c,f4s,f4c,f5s,f5c,f6s,f6c,f7s,f7c,f8s,f8c,f9s,f9c,f10s,f10c,f11s,f11c,f12s,f12c,f13s,f13c,f14s,f14c:std_logic;
+signal f15s,f15c,f16s,f16c,f17s,f17c,f18s,f18c,f19s,f19c,f20s,f20c,f21s,f21c,f22s,f22c,f23s,f23c:std_logic;
+signal f24s,f24c,f25s,f25c,f26s,f26c,f27s,f27c,f28s,f28c,f29s,f29c,f30s,f30c,f31s,f31c,f32s,f32c,f33s,f33c,f34s,f34c:std_logic;
+

@@ -1,0 +1,241 @@
+library std;
+use std.standard.all;
+library ieee;
+use ieee.std_logic_1164.all;
+library ieee;
+use ieee.numeric_std.all; 
+library work;
+use work.given_gates.all;
+
+
+entity BK_adder is
+port( A,B: in std_ulogic_vector(15 downto 0); C_0:in std_ulogic;
+sum : out std_ulogic_vector(15 downto 0); out_carry : out std_ulogic);
+end entity BK_adder;
+architecture method of BK_adder is
+--G_0,P_0 are 1st order G,P values
+--G_1,P_1 are 2nd order G,P values
+--G_2,P_2 are 3rd order G,P values
+--G_3,P_3 are 4th order G,P values
+--G_4,P_4 are 5th order G,P values
+
+signal G0,P0,C_bit: std_ulogic_vector(15 downto 0);
+signal G1,P1:std_ulogic_vector(7 downto 0);
+signal G2,P2:std_ulogic_vector(3 downto 0);
+signal G3,P3:std_ulogic_vector(1 downto 0);
+signal G4,P4:std_ulogic;
+begin
+P0_0: xorgate
+port map(A=>A(0),B=>B(0),uneq=>P0(0));
+P0_1: xorgate
+port map(A=>A(1),B=>B(1),uneq=>P0(1));
+P0_2: xorgate
+port map(A=>A(2),B=>B(2),uneq=>P0(2));
+P0_3: xorgate
+port map(A=>A(3),B=>B(3),uneq=>P0(3));
+P0_4: xorgate
+port map(A=>A(4),B=>B(4),uneq=>P0(4));
+P0_5: xorgate
+port map(A=>A(5),B=>B(5),uneq=>P0(5));
+P0_6: xorgate
+port map(A=>A(6),B=>B(6),uneq=>P0(6));
+P0_7: xorgate
+port map(A=>A(7),B=>B(7),uneq=>P0(7));
+P0_8: xorgate
+port map(A=>A(8),B=>B(8),uneq=>P0(8));
+P0_9: xorgate
+port map(A=>A(9),B=>B(9),uneq=>P0(9));
+P0_10: xorgate
+port map(A=>A(10),B=>B(10),uneq=>P0(10));
+P0_11: xorgate
+port map(A=>A(11),B=>B(11),uneq=>P0(11));
+P0_12: xorgate
+port map(A=>A(12),B=>B(12),uneq=>P0(12));
+P0_13: xorgate
+port map(A=>A(13),B=>B(13),uneq=>P0(13));
+P0_14: xorgate
+port map(A=>A(14),B=>B(14),uneq=>P0(14));
+P0_15: xorgate
+port map(A=>A(15),B=>B(15),uneq=>P0(15));
+
+C_bit(0)<=C_0;
+
+G0_0: Cin_map_G
+port map(A=>A(0),B=>B(0),Cin=>C_bit(0),Bit0_G=>G0(0));
+
+
+
+G0_1: andgate
+port map(A=>A(1),B=>B(1),prod=>G0(1));
+G0_2: andgate
+port map(A=>A(2),B=>B(2),prod=>G0(2));
+G0_3: andgate
+port map(A=>A(3),B=>B(3),prod=>G0(3));
+G0_4: andgate
+port map(A=>A(4),B=>B(4),prod=>G0(4));
+G0_5: andgate
+port map(A=>A(5),B=>B(5),prod=>G0(5));
+G0_6: andgate
+port map(A=>A(6),B=>B(6),prod=>G0(6));
+G0_7: andgate
+port map(A=>A(7),B=>B(7),prod=>G0(7));
+G0_8: andgate
+port map(A=>A(8),B=>B(8),prod=>G0(8));
+G0_9: andgate
+port map(A=>A(9),B=>B(9),prod=>G0(9));
+G0_10: andgate
+port map(A=>A(10),B=>B(10),prod=>G0(10));
+G0_11: andgate
+port map(A=>A(11),B=>B(11),prod=>G0(11));
+G0_12: andgate
+port map(A=>A(12),B=>B(12),prod=>G0(12));
+G0_13: andgate
+port map(A=>A(13),B=>B(13),prod=>G0(13));
+G0_14: andgate
+port map(A=>A(14),B=>B(14),prod=>G0(14));
+G0_15: andgate
+port map(A=>A(15),B=>B(15),prod=>G0(15));
+
+
+P1_1_0:andgate
+port map(A=>P0(0),B=>P0(1),prod=>P1(0));
+P1_3_2:andgate
+port map(A=>P0(2),B=>P0(3),prod=>P1(1));
+P1_5_4:andgate
+port map(A=>P0(4),B=>P0(5),prod=>P1(2));
+P1_7_6:andgate
+port map(A=>P0(6),B=>P0(7),prod=>P1(3));
+P1_9_8:andgate
+port map(A=>P0(8),B=>P0(9),prod=>P1(4));
+P1_11_10:andgate
+port map(A=>P0(10),B=>P0(11),prod=>P1(5));
+P1_13_12:andgate
+port map(A=>P0(12),B=>P0(13),prod=>P1(6));
+P1_15_14:andgate
+port map(A=>P0(14),B=>P0(15),prod=>P1(7));
+
+
+G1_1_0: abcgate
+port map(A=>G0(1),B=>P0(1),C=>G0(0),abc=>G1(0));
+G1_3_2: abcgate
+port map(A=>G0(3),B=>P0(3),C=>G0(2),abc=>G1(1));
+G1_5_4: abcgate
+port map(A=>G0(5),B=>P0(5),C=>G0(4),abc=>G1(2));
+G1_7_6: abcgate
+port map(A=>G0(7),B=>P0(7),C=>G0(6),abc=>G1(3));
+G1_9_8: abcgate
+port map(A=>G0(9),B=>P0(9),C=>G0(8),abc=>G1(4));
+G1_11_10: abcgate
+port map(A=>G0(11),B=>P0(11),C=>G0(10),abc=>G1(5));
+G1_13_12: abcgate
+port map(A=>G0(13),B=>P0(13),C=>G0(12),abc=>G1(6));
+G1_15_14: abcgate
+port map(A=>G0(15),B=>P0(15),C=>G0(14),abc=>G1(7));
+
+
+P2_3_0:andgate
+port map(A=>P1(1),B=>P1(0),prod=>P2(0));
+P2_7_4:andgate
+port map(A=>P1(3),B=>P1(2),prod=>P2(1));
+P2_11_8:andgate
+port map(A=>P1(5),B=>P1(4),prod=>P2(2));
+P2_15_12:andgate
+port map(A=>P1(7),B=>P1(6),prod=>P2(3));
+
+
+G2_3_0:abcgate
+port map(A=>G1(1),B=>P1(1),C=>G1(0),abc=>G2(0));
+G2_7_4:abcgate
+port map(A=>G1(3),B=>P1(3),C=>G1(2),abc=>G2(1));
+G2_11_8:abcgate
+port map(A=>G1(5),B=>P1(5),C=>G1(4),abc=>G2(2));
+G2_15_12:abcgate
+port map(A=>G1(7),B=>P1(7),C=>G1(6),abc=>G2(3));
+
+P3_7_0:andgate
+port map(A=>P2(1),B=>P2(0),prod=>P3(0));
+P3_15_8:andgate
+port map(A=>P2(3),B=>P2(1),prod=>P3(1));
+
+G3_7_0:abcgate
+port map(A=>G2(1),B=>P2(1),C=>G2(0),abc=>G3(0));
+G3_15_8:abcgate
+port map(A=>G2(3),B=>P2(3),C=>G2(2),abc=>G3(1));
+
+P4_15_0:andgate
+port map(A=>P3(1),B=>P3(0),prod=>P4);
+
+G4_15_0:abcgate
+port map(A=>G3(1),B=>P3(1),C=>G3(0),abc=>G4);
+
+
+
+
+C_bit(1)<=G0(0);
+
+C2: abcgate
+port map(A=>G1(0),B=>P1(0),C=>C_0,abc=>C_bit(2));
+C3: abcgate
+port map(A=>G0(2),B=>P0(2),C=>C_bit(2),abc=>C_bit(3));
+C4: abcgate
+port map(A=>G2(0),B=>P2(0),C=>C_0,abc=>C_bit(4));
+C5: abcgate
+port map(A=>G0(4),B=>P0(4),C=>C_bit(4),abc=>C_bit(5));
+C6: abcgate
+port map(A=>G1(2),B=>P1(2),C=>C_bit(4),abc=>C_bit(6));
+C7: abcgate
+port map(A=>G0(6),B=>P0(6),C=>C_bit(6),abc=>C_bit(7));
+C8: abcgate
+port map(A=>G3(0),B=>P3(0),C=>C_0,abc=>C_bit(8));
+C9: abcgate
+port map(A=>G0(8),B=>P0(8),C=>C_bit(8),abc=>C_bit(9));
+C10: abcgate
+port map(A=>G1(4),B=>P1(4),C=>C_bit(8),abc=>C_bit(10));
+C11: abcgate
+port map(A=>G0(10),B=>P0(10),C=>C_bit(10),abc=>C_bit(11));
+C12: abcgate
+port map(A=>G2(2),B=>P2(2),C=>C_bit(8),abc=>C_bit(12));
+C13: abcgate
+port map(A=>G0(12),B=>P0(12),C=>C_bit(12),abc=>C_bit(13));
+C14: abcgate
+port map(A=>G1(6),B=>P1(6),C=>C_bit(12),abc=>C_bit(14));
+C15: abcgate
+port map(A=>G0(14),B=>P0(14),C=>C_bit(14),abc=>C_bit(15));
+Cout: abcgate
+port map(A=>G3(1),B=>P3(1),C=>C_bit(8),abc=>out_carry);
+
+
+S0: xorgate
+port map(A=>P0(0),B=>C_bit(0),uneq=>sum(0));
+S1: xorgate
+port map(A=>P0(1),B=>C_bit(1),uneq=>sum(1));
+S2: xorgate
+port map(A=>P0(2),B=>C_bit(2),uneq=>sum(2));
+S3: xorgate
+port map(A=>P0(3),B=>C_bit(3),uneq=>sum(3));
+S4: xorgate
+port map(A=>P0(4),B=>C_bit(4),uneq=>sum(4));
+S5: xorgate
+port map(A=>P0(5),B=>C_bit(5),uneq=>sum(5));
+S6: xorgate
+port map(A=>P0(6),B=>C_bit(6),uneq=>sum(6));
+S7: xorgate
+port map(A=>P0(7),B=>C_bit(7),uneq=>sum(7));
+S8: xorgate
+port map(A=>P0(8),B=>C_bit(8),uneq=>sum(8));
+S9: xorgate
+port map(A=>P0(9),B=>C_bit(9),uneq=>sum(9));
+S10: xorgate
+port map(A=>P0(10),B=>C_bit(10),uneq=>sum(10));
+S11: xorgate
+port map(A=>P0(11),B=>C_bit(11),uneq=>sum(11));
+S12: xorgate
+port map(A=>P0(12),B=>C_bit(12),uneq=>sum(12));
+S13: xorgate
+port map(A=>P0(13),B=>C_bit(13),uneq=>sum(13));
+S14: xorgate
+port map(A=>P0(14),B=>C_bit(14),uneq=>sum(14));
+S15: xorgate
+port map(A=>P0(15),B=>C_bit(15),uneq=>sum(15));
+
+end method;

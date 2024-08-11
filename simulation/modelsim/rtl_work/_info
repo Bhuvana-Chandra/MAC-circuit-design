@@ -1,0 +1,560 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Intel/Quartus/EE671_VHDL/MAC_adder/simulation/modelsim
+Eabcgate
+Z1 w1667239627
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z4 8C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd
+Z5 FC:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd
+l0
+L60 1
+VBQYb@CKo^=@hm]]00DS9S1
+!s100 12ofW=3?GNQVAPHT08B3^1
+Z6 OV;C;2020.1;71
+31
+Z7 !s110 1667915121
+!i10b 1
+Z8 !s108 1667915121.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd|
+Z10 !s107 C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Atrivial
+R2
+R3
+DEx4 work 7 abcgate 0 22 BQYb@CKo^=@hm]]00DS9S1
+!i122 0
+l65
+L64 4
+Vkg9:`1bF_5]NhW7[HeI>b0
+!s100 n4nE11eAe`e`IY=;bcN^A3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eandgate
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L40 1
+V27BChM>HH2j?8]BoVDo490
+!s100 n`TJU<=88>Zd:8cH6U]Ii1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Atrivial
+R2
+R3
+DEx4 work 7 andgate 0 22 27BChM>HH2j?8]BoVDo490
+!i122 0
+l45
+L44 4
+V>cRjUWe92nn7FJBc@gReA0
+!s100 =EhgXoAkfC>A?o38hG`ZM0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eandgate1
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L94 1
+VPHi?ZmggKk`TU=W[mV;Tb0
+!s100 VQlf<H_F`]2MZY6]kGRg63
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 8 andgate1 0 22 PHi?ZmggKk`TU=W[mV;Tb0
+!i122 0
+l99
+L98 4
+VkzkZEPn]XLNMCeWk`B`e<2
+!s100 TdWBTV0_B=GK76EVJR`e;0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ebk_adder
+Z13 w1667241585
+Z14 DPx4 work 11 given_gates 0 22 Q>EmZ0C]mZWg1mSTSd>k01
+R2
+R3
+!i122 1
+R0
+Z15 8C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd
+Z16 FC:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd
+l0
+L22 1
+Vl]4RgXITaQXSkWS82gQh@0
+!s100 6o@2^U?N=L[K@LghmN1U83
+R6
+31
+Z17 !s110 1667915123
+!i10b 1
+Z18 !s108 1667915123.000000
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd|
+Z20 !s107 C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd|
+!i113 1
+R11
+R12
+Amethod
+R14
+R2
+R3
+DEx4 work 8 bk_adder 0 22 l]4RgXITaQXSkWS82gQh@0
+!i122 1
+l38
+L26 227
+V1i6VoiNCG]o1TLd2MJOKG2
+!s100 7LDjhfk8`oXS8WN4WG[500
+R6
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Pbk_adders
+R14
+Z21 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R2
+R3
+!i122 1
+R13
+R0
+R15
+R16
+l0
+L9 1
+V]Vm_hedb0FjQ7jgcBCFa93
+!s100 2B;^1_MAUP07T6gb`_3Lg2
+R6
+31
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Ecin_map_g
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L71 1
+V@KiUhXHjD@ghl0Sf3g;i72
+!s100 Q;>7AZfVbcIO5@FS695@93
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Atrivial
+R2
+R3
+DEx4 work 9 cin_map_g 0 22 @KiUhXHjD@ghl0Sf3g;i72
+!i122 0
+l76
+L75 4
+ViOeIZS^K[dfnY55N;5g=b3
+!s100 gmbZ7>XYSDn]@Ub@Tm2CR2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Edut
+Z22 w1667194503
+R2
+R3
+!i122 2
+R0
+Z23 8C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd
+Z24 FC:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd
+l0
+L3 1
+VekDU1A^fj3F<`<J4<7_[?2
+!s100 FK9JTB>3>LiFTfgPC;CcE1
+R6
+31
+R17
+!i10b 1
+R18
+Z25 !s90 -reportprogress|300|-93|-work|work|C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd|
+Z26 !s107 C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd|
+!i113 1
+R11
+R12
+Adutwrap
+DEx4 work 3 dut 0 22 ekDU1A^fj3F<`<J4<7_[?2
+R2
+R3
+R14
+!i122 2
+l14
+L9 69
+VPTzc2COzc;3Hm<gG[?mk10
+!s100 HJ044970SVkE`k:bD]h:_1
+R6
+31
+R17
+!i10b 1
+R18
+R25
+R26
+!i113 1
+R11
+R12
+Efa
+R1
+R14
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L119 1
+VedAVCV0H:;So4h[NoB5k^2
+!s100 9LT=DFez9g[K[3fZO04BU3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Astruct
+R14
+R2
+R3
+DEx4 work 2 fa 0 22 edAVCV0H:;So4h[NoB5k^2
+!i122 0
+l124
+L122 14
+VUg:JC3a9oS8`3T_XMkPN31
+!s100 7Z@77LJYhGz0_@hf]ZLRm3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Pgiven_gates
+R2
+R3
+!i122 0
+R1
+R0
+R4
+R5
+l0
+L4 1
+VQ>EmZ0C]mZWg1mSTSd>k01
+!s100 H63zlkh=zF;M674SB?0Q:2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eha
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L81 1
+V7Oz[mll@Sj5?S;WK0mGaG0
+!s100 6X^BzPMmPkHB^eIaOhURB3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 2 ha 0 22 7Oz[mll@Sj5?S;WK0mGaG0
+!i122 0
+l86
+L85 5
+V<9_[4KEHaC9fLR4FM>I2B2
+!s100 UiKLH7N7A]f6gl4dNNG;M0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Emac
+Z27 w1667242474
+Z28 DPx4 work 9 bk_adders 0 22 ]Vm_hedb0FjQ7jgcBCFa93
+R14
+R21
+R2
+R3
+!i122 3
+R0
+Z29 8C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd
+Z30 FC:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd
+l0
+L13 1
+VMdT0F:[Ljl9kDIeU^cZI=2
+!s100 MOIN=GO?FL7e;=[=C::L51
+R6
+31
+R17
+!i10b 1
+R18
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd|
+Z32 !s107 C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd|
+!i113 1
+R11
+R12
+Adesign
+R28
+R14
+R21
+R2
+R3
+DEx4 work 3 mac 0 22 MdT0F:[Ljl9kDIeU^cZI=2
+!i122 3
+l33
+L17 245
+VLClEGf5a65fIdaO1T4jT41
+!s100 bLaO;WT5ZLYMB5AMmzVKH0
+R6
+31
+Z33 !s110 1667915124
+!i10b 1
+R18
+R31
+R32
+!i113 1
+R11
+R12
+Eorgate
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L105 1
+VhGo^OHK[K>5;>8_miGfCP0
+!s100 HbHCFGF5d35?IIh47SNz:1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Aequations
+R2
+R3
+DEx4 work 6 orgate 0 22 hGo^OHK[K>5;>8_miGfCP0
+!i122 0
+l110
+L109 4
+V:[7daaR;Y;id[CAZMSbcE3
+!s100 YBU_egz2emBX;h]f2[C[j3
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etestbench
+Z34 w1667243235
+R3
+R2
+!i122 4
+R0
+Z35 8C:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd
+Z36 FC:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd
+l0
+L7 1
+V]iKK_Z9L:G9B:i8c]3eFH0
+!s100 bWf8kl8zb90X@P1m>V^K20
+R6
+31
+R33
+!i10b 1
+Z37 !s108 1667915124.000000
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd|
+!s107 C:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd|
+!i113 1
+R11
+R12
+Abehave
+R3
+R2
+DEx4 work 9 testbench 0 22 ]iKK_Z9L:G9B:i8c]3eFH0
+!i122 4
+l69
+L9 132
+V7CTgQzTMJ]f90FXF6K5:b3
+!s100 6Xjb9z@eA>6Z>M[3M6]5W2
+R6
+31
+R33
+!i10b 1
+R37
+R38
+Z39 !s107 C:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd|
+!i113 1
+R11
+R12
+Exorgate
+R1
+R2
+R3
+!i122 0
+R0
+R4
+R5
+l0
+L50 1
+V<j@^mAnHBOal@Z9jW;;Pb3
+!s100 Sj6iB;D5ii322P[Ag1RBI0
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Atrivial
+R2
+R3
+DEx4 work 7 xorgate 0 22 <j@^mAnHBOal@Z9jW;;Pb3
+!i122 0
+l55
+L54 4
+VLN;<JDj>WWNkhG`NEYl@93
+!s100 35EjhZUF7YGW22_[;DU]c1
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
