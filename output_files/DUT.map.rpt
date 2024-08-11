@@ -1,0 +1,501 @@
+Analysis & Synthesis report for DUT
+Thu Aug 08 15:10:45 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Port Connectivity Checks: "MAC:add_instance|BK_adder:bk_adder1|abcgate:G4_15_0"
+ 10. Port Connectivity Checks: "MAC:add_instance|BK_adder:bk_adder1|andgate:P4_15_0"
+ 11. Port Connectivity Checks: "MAC:add_instance|BK_adder:bk_adder1"
+ 12. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Thu Aug 08 15:10:45 2024       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; DUT                                         ;
+; Top-level Entity Name       ; DUT                                         ;
+; Family                      ; MAX V                                       ;
+; Total logic elements        ; 204                                         ;
+; Total pins                  ; 49                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                            ; DUT                ; DUT                ;
+; Family name                                                      ; MAX V              ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                      ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                               ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
+; given_gates.vhd                  ; yes             ; User VHDL File  ; C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd      ;         ;
+; MAC.vhd                          ; yes             ; User VHDL File  ; C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd              ;         ;
+; Brent_Kung_adder.vhd             ; yes             ; User VHDL File  ; C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd ;         ;
+; DUT.vhd                          ; yes             ; User VHDL File  ; C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd              ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                    ;
++---------------------------------------------+------------------+
+; Resource                                    ; Usage            ;
++---------------------------------------------+------------------+
+; Total logic elements                        ; 204              ;
+;     -- Combinational with no register       ; 204              ;
+;     -- Register only                        ; 0                ;
+;     -- Combinational with a register        ; 0                ;
+;                                             ;                  ;
+; Logic element usage by number of LUT inputs ;                  ;
+;     -- 4 input functions                    ; 131              ;
+;     -- 3 input functions                    ; 25               ;
+;     -- 2 input functions                    ; 48               ;
+;     -- 1 input functions                    ; 0                ;
+;     -- 0 input functions                    ; 0                ;
+;                                             ;                  ;
+; Logic elements by mode                      ;                  ;
+;     -- normal mode                          ; 204              ;
+;     -- arithmetic mode                      ; 0                ;
+;     -- qfbk mode                            ; 0                ;
+;     -- register cascade mode                ; 0                ;
+;     -- synchronous clear/load mode          ; 0                ;
+;     -- asynchronous clear/load mode         ; 0                ;
+;                                             ;                  ;
+; Total registers                             ; 0                ;
+; I/O pins                                    ; 49               ;
+; Maximum fan-out node                        ; input_vector[23] ;
+; Maximum fan-out                             ; 20               ;
+; Total fan-out                               ; 712              ;
+; Average fan-out                             ; 2.81             ;
++---------------------------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                       ; Entity Name ; Library Name ;
++-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+-------------+--------------+
+; |DUT                        ; 204 (0)     ; 0            ; 0          ; 49   ; 0            ; 204 (0)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                                      ; DUT         ; work         ;
+;    |MAC:add_instance|       ; 204 (41)    ; 0            ; 0          ; 0    ; 0            ; 204 (41)     ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance                                     ; MAC         ; work         ;
+;       |BK_adder:bk_adder1|  ; 49 (0)      ; 0            ; 0          ; 0    ; 0            ; 49 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1                  ; BK_adder    ; work         ;
+;          |abcgate:C10|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C10      ; abcgate     ; work         ;
+;          |abcgate:C11|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C11      ; abcgate     ; work         ;
+;          |abcgate:C12|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C12      ; abcgate     ; work         ;
+;          |abcgate:C13|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C13      ; abcgate     ; work         ;
+;          |abcgate:C14|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C14      ; abcgate     ; work         ;
+;          |abcgate:C15|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C15      ; abcgate     ; work         ;
+;          |abcgate:C5|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C5       ; abcgate     ; work         ;
+;          |abcgate:C6|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C6       ; abcgate     ; work         ;
+;          |abcgate:C7|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C7       ; abcgate     ; work         ;
+;          |abcgate:C9|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C9       ; abcgate     ; work         ;
+;          |abcgate:Cout|     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:Cout     ; abcgate     ; work         ;
+;          |abcgate:G1_11_10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_11_10 ; abcgate     ; work         ;
+;          |abcgate:G1_13_12| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_13_12 ; abcgate     ; work         ;
+;          |abcgate:G1_1_0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_1_0   ; abcgate     ; work         ;
+;          |abcgate:G1_3_2|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_3_2   ; abcgate     ; work         ;
+;          |abcgate:G1_5_4|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_5_4   ; abcgate     ; work         ;
+;          |abcgate:G1_7_6|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_7_6   ; abcgate     ; work         ;
+;          |abcgate:G1_9_8|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_9_8   ; abcgate     ; work         ;
+;          |abcgate:G2_11_8|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G2_11_8  ; abcgate     ; work         ;
+;          |abcgate:G2_3_0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G2_3_0   ; abcgate     ; work         ;
+;          |abcgate:G2_7_4|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G2_7_4   ; abcgate     ; work         ;
+;          |abcgate:G3_7_0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G3_7_0   ; abcgate     ; work         ;
+;          |xorgate:P0_0|     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:P0_0     ; xorgate     ; work         ;
+;          |xorgate:P0_2|     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:P0_2     ; xorgate     ; work         ;
+;          |xorgate:S10|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S10      ; xorgate     ; work         ;
+;          |xorgate:S11|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S11      ; xorgate     ; work         ;
+;          |xorgate:S12|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S12      ; xorgate     ; work         ;
+;          |xorgate:S13|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S13      ; xorgate     ; work         ;
+;          |xorgate:S14|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S14      ; xorgate     ; work         ;
+;          |xorgate:S15|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S15      ; xorgate     ; work         ;
+;          |xorgate:S1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S1       ; xorgate     ; work         ;
+;          |xorgate:S2|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S2       ; xorgate     ; work         ;
+;          |xorgate:S3|       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S3       ; xorgate     ; work         ;
+;          |xorgate:S4|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S4       ; xorgate     ; work         ;
+;          |xorgate:S5|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S5       ; xorgate     ; work         ;
+;          |xorgate:S6|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S6       ; xorgate     ; work         ;
+;          |xorgate:S7|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S7       ; xorgate     ; work         ;
+;          |xorgate:S8|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S8       ; xorgate     ; work         ;
+;          |xorgate:S9|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S9       ; xorgate     ; work         ;
+;       |FA:fa10|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa10                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa10|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa10|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa11|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa11                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa11|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa11|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa12|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa12                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa12|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa12|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa13|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa14|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa14                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa14|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa14|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa15|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa15                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa15|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa15|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa16|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa16                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa16|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa16|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa17|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa18|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa18                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa18|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa18|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa19|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa19                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa19|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa19|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa1|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa1                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa1|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa1|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa20|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa20                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa20|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa20|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa21|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa21                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa21|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa21|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa22|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa22                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa22|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa22|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa23|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa24|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa24                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa24|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa24|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa25|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa25                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa25|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa25|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa26|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa26                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa26|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa26|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa27|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa27                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa27|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa27|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa28|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa28                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa28|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa28|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa29|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa29                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa29|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa29|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa2|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa2                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa2|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa2|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa30|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa30                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa30|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa30|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa31|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa31                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa31|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa31|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa32|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa32                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa32|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa32|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa33|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa33                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa33|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa33|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa34|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa34                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa34|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa34|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa35|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa35                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa35|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa35|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa36|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa36                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa36|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa36|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa37|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa37                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa37|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa37|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa38|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa38                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa38|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa38|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa39|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa39                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa39|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa39|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa3|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa3                              ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa3|HA:ha1                       ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa3|orgate:o1                    ; orgate      ; work         ;
+;       |FA:fa40|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa40                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa40|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa40|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa41|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa41                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa41|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa41|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa42|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa42                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa42|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa42|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa43|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa43                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa43|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa43|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa44|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa44                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa44|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa44|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa45|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa45                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa45|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa45|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa46|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa46                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa46|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa46|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa47|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa47                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa47|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa47|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa48|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa48                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa48|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa48|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa4|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa4                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa4|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa4|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa5|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa5                              ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa5|HA:ha1                       ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa5|orgate:o1                    ; orgate      ; work         ;
+;       |FA:fa6|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa6                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa6|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa6|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa7|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa7                              ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa7|HA:ha1                       ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa7|orgate:o1                    ; orgate      ; work         ;
+;       |FA:fa8|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa8                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa8|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa8|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa9|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa9                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa9|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa9|xorgate:x1                   ; xorgate     ; work         ;
+;       |HA:ha1|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha1                              ; HA          ; work         ;
+;       |HA:ha2|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha2                              ; HA          ; work         ;
+;       |HA:ha3|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha3                              ; HA          ; work         ;
+;       |HA:ha4|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha4                              ; HA          ; work         ;
+;       |HA:ha5|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha5                              ; HA          ; work         ;
+;       |HA:ha7|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha7                              ; HA          ; work         ;
+;       |HA:ha8|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha8                              ; HA          ; work         ;
++-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MAC:add_instance|BK_adder:bk_adder1|abcgate:G4_15_0"                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; abc  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "MAC:add_instance|BK_adder:bk_adder1|andgate:P4_15_0"                                ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; prod ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------+
+; Port Connectivity Checks: "MAC:add_instance|BK_adder:bk_adder1" ;
++------+-------+----------+---------------------------------------+
+; Port ; Type  ; Severity ; Details                               ;
++------+-------+----------+---------------------------------------+
+; cin  ; Input ; Info     ; Stuck at GND                          ;
++------+-------+----------+---------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Thu Aug 08 15:10:34 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off MAC_adder -c DUT
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 17 design units, including 8 entities, in source file given_gates.vhd
+    Info (12022): Found design unit 1: given_gates File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 4
+    Info (12022): Found design unit 2: andgate-trivial File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 44
+    Info (12022): Found design unit 3: xorgate-trivial File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 54
+    Info (12022): Found design unit 4: abcgate-trivial File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 64
+    Info (12022): Found design unit 5: Cin_map_G-trivial File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 75
+    Info (12022): Found design unit 6: HA-Equations File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 85
+    Info (12022): Found design unit 7: ANdgate1-Equations File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 98
+    Info (12022): Found design unit 8: orgate-Equations File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 109
+    Info (12022): Found design unit 9: FA-Struct File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 122
+    Info (12023): Found entity 1: andgate File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 40
+    Info (12023): Found entity 2: xorgate File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 50
+    Info (12023): Found entity 3: abcgate File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 60
+    Info (12023): Found entity 4: Cin_map_G File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 71
+    Info (12023): Found entity 5: HA File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 81
+    Info (12023): Found entity 6: ANDgate1 File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 94
+    Info (12023): Found entity 7: orgate File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 105
+    Info (12023): Found entity 8: FA File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 119
+Info (12021): Found 2 design units, including 1 entities, in source file mac.vhd
+    Info (12022): Found design unit 1: MAC-design File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd Line: 17
+    Info (12023): Found entity 1: MAC File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd Line: 13
+Info (12021): Found 3 design units, including 1 entities, in source file brent_kung_adder.vhd
+    Info (12022): Found design unit 1: bk_adders File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 9
+    Info (12022): Found design unit 2: BK_adder-method File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 26
+    Info (12023): Found entity 1: BK_adder File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 22
+Info (12021): Found 2 design units, including 1 entities, in source file dut.vhd
+    Info (12022): Found design unit 1: DUT-DutWrap File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd Line: 9
+    Info (12023): Found entity 1: DUT File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file testbench.vhd
+    Info (12022): Found design unit 1: Testbench-Behave File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd Line: 9
+    Info (12023): Found entity 1: Testbench File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Testbench.vhd Line: 7
+Info (12127): Elaborating entity "DUT" for the top level hierarchy
+Info (12128): Elaborating entity "MAC" for hierarchy "MAC:add_instance" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/DUT.vhd Line: 18
+Info (12128): Elaborating entity "HA" for hierarchy "MAC:add_instance|HA:ha1" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd Line: 109
+Info (12128): Elaborating entity "FA" for hierarchy "MAC:add_instance|FA:fa1" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd Line: 126
+Info (12128): Elaborating entity "andgate" for hierarchy "MAC:add_instance|FA:fa1|andgate:a1" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 130
+Info (12128): Elaborating entity "orgate" for hierarchy "MAC:add_instance|FA:fa1|orgate:o1" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 131
+Info (12128): Elaborating entity "xorgate" for hierarchy "MAC:add_instance|FA:fa1|xorgate:x1" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/given_gates.vhd Line: 134
+Info (12128): Elaborating entity "BK_adder" for hierarchy "MAC:add_instance|BK_adder:bk_adder1" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/MAC.vhd Line: 226
+Warning (10036): Verilog HDL or VHDL warning at Brent_Kung_adder.vhd(37): object "G4" assigned a value but never read File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 37
+Warning (10036): Verilog HDL or VHDL warning at Brent_Kung_adder.vhd(37): object "P4" assigned a value but never read File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 37
+Info (12128): Elaborating entity "Cin_map_G" for hierarchy "MAC:add_instance|BK_adder:bk_adder1|Cin_map_G:G0_0" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 74
+Info (12128): Elaborating entity "abcgate" for hierarchy "MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_1_0" File: C:/Intel/Quartus/EE671_VHDL/MAC_adder/Brent_Kung_adder.vhd Line: 129
+Info (21057): Implemented 253 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 17 output pins
+    Info (21061): Implemented 204 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4767 megabytes
+    Info: Processing ended: Thu Aug 08 15:10:45 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:12
+
+

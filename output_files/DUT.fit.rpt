@@ -1,0 +1,880 @@
+Fitter report for DUT
+Thu Aug 08 15:10:48 2024
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Fitter Summary
+  3. Fitter Settings
+  4. Parallel Compilation
+  5. Pin-Out File
+  6. Fitter Resource Usage Summary
+  7. Input Pins
+  8. Output Pins
+  9. I/O Bank Usage
+ 10. All Package Pins
+ 11. Output Pin Default Load For Reported TCO
+ 12. I/O Assignment Warnings
+ 13. Fitter Resource Utilization by Entity
+ 14. Delay Chain Summary
+ 15. Routing Usage Summary
+ 16. LAB Logic Elements
+ 17. LAB Signals Sourced
+ 18. LAB Signals Sourced Out
+ 19. LAB Distinct Inputs
+ 20. Fitter Device Options
+ 21. Fitter Messages
+ 22. Fitter Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------+
+; Fitter Summary                                                      ;
++-----------------------+---------------------------------------------+
+; Fitter Status         ; Successful - Thu Aug 08 15:10:48 2024       ;
+; Quartus Prime Version ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name         ; DUT                                         ;
+; Top-level Entity Name ; DUT                                         ;
+; Family                ; MAX V                                       ;
+; Device                ; 5M240ZM100C4                                ;
+; Timing Models         ; Final                                       ;
+; Total logic elements  ; 204 / 240 ( 85 % )                          ;
+; Total pins            ; 49 / 79 ( 62 % )                            ;
+; Total virtual pins    ; 0                                           ;
+; UFM blocks            ; 0 / 1 ( 0 % )                               ;
++-----------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                      ;
++--------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Option                                                             ; Setting                        ; Default Value                  ;
++--------------------------------------------------------------------+--------------------------------+--------------------------------+
+; Device                                                             ; AUTO                           ;                                ;
+; Maximum processors allowed for parallel compilation                ; All                            ;                                ;
+; Fit Attempts to Skip                                               ; 0                              ; 0.0                            ;
+; Use smart compilation                                              ; Off                            ; Off                            ;
+; Enable parallel Assembler and Timing Analyzer during compilation   ; On                             ; On                             ;
+; Enable compact report table                                        ; Off                            ; Off                            ;
+; Router Timing Optimization Level                                   ; Normal                         ; Normal                         ;
+; Placement Effort Multiplier                                        ; 1.0                            ; 1.0                            ;
+; Router Effort Multiplier                                           ; 1.0                            ; 1.0                            ;
+; Always Enable Input Buffers                                        ; Off                            ; Off                            ;
+; Optimize Hold Timing                                               ; IO Paths and Minimum TPD Paths ; IO Paths and Minimum TPD Paths ;
+; Optimize Multi-Corner Timing                                       ; Off                            ; Off                            ;
+; Guarantee I/O Paths Have Zero Hold Time at Fast Corner             ; On                             ; On                             ;
+; Power Optimization During Fitting                                  ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing                                                    ; Normal compilation             ; Normal compilation             ;
+; Optimize Timing for ECOs                                           ; Off                            ; Off                            ;
+; Regenerate Full Fit Report During ECO Compiles                     ; Off                            ; Off                            ;
+; Optimize IOC Register Placement for Timing                         ; Normal                         ; Normal                         ;
+; Limit to One Fitting Attempt                                       ; Off                            ; Off                            ;
+; Final Placement Optimizations                                      ; Automatically                  ; Automatically                  ;
+; Fitter Aggressive Routability Optimizations                        ; Automatically                  ; Automatically                  ;
+; Fitter Initial Placement Seed                                      ; 1                              ; 1                              ;
+; Periphery to Core Placement and Routing Optimization               ; Off                            ; Off                            ;
+; Slow Slew Rate                                                     ; Off                            ; Off                            ;
+; PCI I/O                                                            ; Off                            ; Off                            ;
+; Weak Pull-Up Resistor                                              ; Off                            ; Off                            ;
+; Enable Bus-Hold Circuitry                                          ; Off                            ; Off                            ;
+; Auto Delay Chains                                                  ; On                             ; On                             ;
+; Auto Delay Chains for High Fanout Input Pins                       ; Off                            ; Off                            ;
+; Perform Physical Synthesis for Combinational Logic for Performance ; Off                            ; Off                            ;
+; Perform Register Duplication for Performance                       ; Off                            ; Off                            ;
+; Perform Register Retiming for Performance                          ; Off                            ; Off                            ;
+; Perform Asynchronous Signal Pipelining                             ; Off                            ; Off                            ;
+; Fitter Effort                                                      ; Auto Fit                       ; Auto Fit                       ;
+; Physical Synthesis Effort Level                                    ; Normal                         ; Normal                         ;
+; Logic Cell Insertion - Logic Duplication                           ; Auto                           ; Auto                           ;
+; Auto Register Duplication                                          ; Auto                           ; Auto                           ;
+; Auto Global Clock                                                  ; On                             ; On                             ;
+; Auto Global Register Control Signals                               ; On                             ; On                             ;
+; Force Fitter to Avoid Periphery Placement Warnings                 ; Off                            ; Off                            ;
++--------------------------------------------------------------------+--------------------------------+--------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++--------------+
+; Pin-Out File ;
++--------------+
+The pin-out file can be found in C:/Intel/Quartus/EE671_VHDL/MAC_adder/output_files/DUT.pin.
+
+
++---------------------------------------------------------------------+
+; Fitter Resource Usage Summary                                       ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Total logic elements                        ; 204 / 240 ( 85 % )    ;
+;     -- Combinational with no register       ; 204                   ;
+;     -- Register only                        ; 0                     ;
+;     -- Combinational with a register        ; 0                     ;
+;                                             ;                       ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 131                   ;
+;     -- 3 input functions                    ; 25                    ;
+;     -- 2 input functions                    ; 48                    ;
+;     -- 1 input functions                    ; 0                     ;
+;     -- 0 input functions                    ; 0                     ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 204                   ;
+;     -- arithmetic mode                      ; 0                     ;
+;     -- qfbk mode                            ; 0                     ;
+;     -- register cascade mode                ; 0                     ;
+;     -- synchronous clear/load mode          ; 0                     ;
+;     -- asynchronous clear/load mode         ; 0                     ;
+;                                             ;                       ;
+; Total registers                             ; 0 / 240 ( 0 % )       ;
+; Total LABs                                  ; 22 / 24 ( 92 % )      ;
+; Logic elements in carry chains              ; 0                     ;
+; Virtual pins                                ; 0                     ;
+; I/O pins                                    ; 49 / 79 ( 62 % )      ;
+;     -- Clock pins                           ; 4 / 4 ( 100 % )       ;
+;                                             ;                       ;
+; UFM blocks                                  ; 0 / 1 ( 0 % )         ;
+;                                             ;                       ;
+;     -- Total Fixed Point DSP Blocks         ; 0                     ;
+;     -- Total Floating Point DSP Blocks      ; 0                     ;
+;                                             ;                       ;
+; Global signals                              ; 0                     ;
+;     -- Global clocks                        ; 0 / 4 ( 0 % )         ;
+; JTAGs                                       ; 0 / 1 ( 0 % )         ;
+; Average interconnect usage (total/H/V)      ; 17.5% / 16.3% / 18.7% ;
+; Peak interconnect usage (total/H/V)         ; 17.5% / 16.3% / 18.7% ;
+; Maximum fan-out                             ; 20                    ;
+; Highest non-global fan-out                  ; 20                    ;
+; Total fan-out                               ; 712                   ;
+; Average fan-out                             ; 2.81                  ;
++---------------------------------------------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                               ;
++------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
+; Name             ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Combinational Fan-Out ; Registered Fan-Out ; Global ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Location assigned by ; Slow Slew Rate ;
++------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
+; input_vector[0]  ; B6    ; 2        ; 5            ; 5            ; 2           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[10] ; L10   ; 1        ; 7            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[11] ; H10   ; 2        ; 8            ; 1            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[12] ; L4    ; 1        ; 3            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[13] ; K4    ; 1        ; 3            ; 0            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[14] ; F2    ; 1        ; 1            ; 3            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[15] ; B1    ; 1        ; 1            ; 4            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[16] ; D10   ; 2        ; 8            ; 4            ; 3           ; 14                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[17] ; K5    ; 1        ; 3            ; 0            ; 1           ; 12                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[18] ; E10   ; 2        ; 8            ; 3            ; 1           ; 15                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[19] ; D3    ; 1        ; 1            ; 4            ; 3           ; 14                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[1]  ; D9    ; 2        ; 8            ; 3            ; 0           ; 3                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[20] ; D11   ; 2        ; 8            ; 4            ; 4           ; 16                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[21] ; F10   ; 2        ; 8            ; 2            ; 0           ; 16                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[22] ; B8    ; 2        ; 6            ; 5            ; 1           ; 19                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[23] ; L7    ; 1        ; 5            ; 0            ; 1           ; 20                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[24] ; E11   ; 2        ; 8            ; 3            ; 2           ; 18                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[25] ; A9    ; 2        ; 6            ; 5            ; 0           ; 19                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[26] ; C10   ; 2        ; 8            ; 4            ; 1           ; 15                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[27] ; B11   ; 2        ; 8            ; 4            ; 0           ; 17                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[28] ; B7    ; 2        ; 6            ; 5            ; 3           ; 15                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[29] ; F3    ; 1        ; 1            ; 1            ; 0           ; 16                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[2]  ; F11   ; 2        ; 8            ; 3            ; 3           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[30] ; H9    ; 2        ; 8            ; 1            ; 1           ; 15                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[31] ; G1    ; 1        ; 1            ; 2            ; 2           ; 11                    ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[3]  ; G11   ; 2        ; 8            ; 3            ; 4           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[4]  ; C2    ; 1        ; 1            ; 4            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[5]  ; C1    ; 1        ; 1            ; 4            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[6]  ; L6    ; 1        ; 4            ; 0            ; 2           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[7]  ; K6    ; 1        ; 4            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[8]  ; J5    ; 1        ; 4            ; 0            ; 1           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
+; input_vector[9]  ; L11   ; 1        ; 7            ; 0            ; 0           ; 2                     ; 0                  ; no     ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Fitter               ; no             ;
++------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+-----------------+----------+--------------+--------------+----------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Output Pins                                                                                                                                                                                                                                                                                                                         ;
++-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; Name              ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Slow Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Fast Output Connection ; Location assigned by ; Load  ; Output Enable Source ; Output Enable Group ;
++-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+; output_vector[0]  ; J7    ; 1        ; 5            ; 0            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[10] ; L5    ; 1        ; 3            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[11] ; E1    ; 1        ; 1            ; 2            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[12] ; H1    ; 1        ; 1            ; 1            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[13] ; L3    ; 1        ; 2            ; 0            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[14] ; D1    ; 1        ; 1            ; 3            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[15] ; D2    ; 1        ; 1            ; 3            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[16] ; E2    ; 1        ; 1            ; 3            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[1]  ; C6    ; 2        ; 5            ; 5            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[2]  ; F9    ; 2        ; 8            ; 2            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[3]  ; H11   ; 2        ; 8            ; 2            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[4]  ; A8    ; 2        ; 6            ; 5            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[5]  ; K8    ; 1        ; 6            ; 0            ; 2           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; no                     ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[6]  ; A7    ; 2        ; 5            ; 5            ; 0           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[7]  ; C7    ; 2        ; 5            ; 5            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[8]  ; G2    ; 1        ; 1            ; 2            ; 3           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
+; output_vector[9]  ; F1    ; 1        ; 1            ; 2            ; 1           ; no              ; no             ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 16mA             ; yes                    ; Fitter               ; 10 pF ; -                    ; -                   ;
++-------------------+-------+----------+--------------+--------------+-------------+-----------------+----------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+------------------------+----------------------+-------+----------------------+---------------------+
+
+
++------------------------------------------------------------+
+; I/O Bank Usage                                             ;
++----------+------------------+---------------+--------------+
+; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
++----------+------------------+---------------+--------------+
+; 1        ; 27 / 38 ( 71 % ) ; 3.3V          ; --           ;
+; 2        ; 22 / 41 ( 54 % ) ; 3.3V          ; --           ;
++----------+------------------+---------------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; All Package Pins                                                                                                                                ;
++----------+------------+----------+-------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; Location ; Pad Number ; I/O Bank ; Pin Name/Usage    ; Dir.   ; I/O Standard ; Voltage ; I/O Type   ; User Assignment ; Bus Hold ; Weak Pull Up ;
++----------+------------+----------+-------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+; A1       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; A2       ; 81         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A3       ; 79         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A4       ; 77         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A5       ; 75         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A6       ; 73         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A7       ; 69         ; 2        ; output_vector[6]  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A8       ; 67         ; 2        ; output_vector[4]  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A9       ; 65         ; 2        ; input_vector[25]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; A10      ; 63         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; A11      ; 62         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B1       ; 0          ; 1        ; input_vector[15]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; B2       ; 82         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B3       ; 80         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B4       ; 78         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B5       ; 76         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B6       ; 71         ; 2        ; input_vector[0]   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B7       ; 68         ; 2        ; input_vector[28]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B8       ; 66         ; 2        ; input_vector[22]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B9       ; 64         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B10      ; 61         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B11      ; 60         ; 2        ; input_vector[27]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C1       ; 2          ; 1        ; input_vector[5]   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C2       ; 1          ; 1        ; input_vector[4]   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C4       ;            ; 2        ; VCCIO2            ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; C5       ; 74         ; 2        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C6       ; 70         ; 2        ; output_vector[1]  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C7       ; 72         ; 2        ; output_vector[7]  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C8       ;            ; 2        ; VCCIO2            ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; C10      ; 59         ; 2        ; input_vector[26]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; C11      ; 58         ; 2        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; D1       ; 5          ; 1        ; output_vector[14] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D2       ; 4          ; 1        ; output_vector[15] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D3       ; 3          ; 1        ; input_vector[19]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D5       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; D7       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; D9       ; 55         ; 2        ; input_vector[1]   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D10      ; 57         ; 2        ; input_vector[16]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; D11      ; 56         ; 2        ; input_vector[20]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E1       ; 8          ; 1        ; output_vector[11] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E2       ; 6          ; 1        ; output_vector[16] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E3       ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; E4       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; E8       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; E9       ;            ;          ; VCCINT            ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; E10      ; 54         ; 2        ; input_vector[18]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E11      ; 53         ; 2        ; input_vector[24]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F1       ; 9          ; 1        ; output_vector[9]  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F2       ; 7          ; 1        ; input_vector[14]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F3       ; 12         ; 1        ; input_vector[29]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F9       ; 49         ; 2        ; output_vector[2]  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F10      ; 50         ; 2        ; input_vector[21]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F11      ; 52         ; 2        ; input_vector[2]   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G1       ; 10         ; 1        ; input_vector[31]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G2       ; 11         ; 1        ; output_vector[8]  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G3       ;            ;          ; VCCINT            ; power  ;              ; 1.8V    ; --         ;                 ; --       ; --           ;
+; G4       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; G8       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; G9       ;            ; 2        ; VCCIO2            ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; G10      ; 48         ; 2        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; G11      ; 51         ; 2        ; input_vector[3]   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H1       ; 13         ; 1        ; output_vector[12] ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H2       ; 15         ; 1        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H3       ; 14         ; 1        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; H5       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; H7       ;            ;          ; GND               ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
+; H9       ; 45         ; 2        ; input_vector[30]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H10      ; 46         ; 2        ; input_vector[11]  ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; H11      ; 47         ; 2        ; output_vector[3]  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; J1       ; 16         ; 1        ; #TMS              ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; J2       ; 17         ; 1        ; #TDI              ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; J4       ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; J5       ; 29         ; 1        ; input_vector[8]   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J6       ; 32         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; J7       ; 31         ; 1        ; output_vector[0]  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; J8       ;            ; 1        ; VCCIO1            ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
+; J10      ; 43         ; 2        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; J11      ; 44         ; 2        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; K1       ; 18         ; 1        ; #TCK              ; input  ;              ;         ; --         ;                 ; --       ; --           ;
+; K2       ; 19         ; 1        ; #TDO              ; output ;              ;         ; --         ;                 ; --       ; --           ;
+; K3       ; 22         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; K4       ; 24         ; 1        ; input_vector[13]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K5       ; 26         ; 1        ; input_vector[17]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K6       ; 30         ; 1        ; input_vector[7]   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K7       ; 34         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; K8       ; 36         ; 1        ; output_vector[5]  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; K9       ; 38         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; K10      ; 40         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; K11      ; 42         ; 2        ; GND*              ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; L1       ; 20         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; L2       ; 21         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; L3       ; 23         ; 1        ; output_vector[13] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; L4       ; 25         ; 1        ; input_vector[12]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; L5       ; 27         ; 1        ; output_vector[10] ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; L6       ; 28         ; 1        ; input_vector[6]   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; L7       ; 33         ; 1        ; input_vector[23]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; L8       ; 35         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; L9       ; 37         ; 1        ; GND*              ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; L10      ; 39         ; 1        ; input_vector[10]  ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; L11      ; 41         ; 1        ; input_vector[9]   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
++----------+------------+----------+-------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
+Note: Pin directions (input, output or bidir) are based on device operating in user mode.
+
+
++-------------------------------------------------------------+
+; Output Pin Default Load For Reported TCO                    ;
++----------------------------+-------+------------------------+
+; I/O Standard               ; Load  ; Termination Resistance ;
++----------------------------+-------+------------------------+
+; 3.3-V LVTTL                ; 10 pF ; Not Available          ;
+; 3.3-V LVCMOS               ; 10 pF ; Not Available          ;
+; 2.5 V                      ; 10 pF ; Not Available          ;
+; 1.8 V                      ; 10 pF ; Not Available          ;
+; 1.5 V                      ; 10 pF ; Not Available          ;
+; 3.3V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 2.5V Schmitt Trigger Input ; 10 pF ; Not Available          ;
+; 1.2 V                      ; 10 pF ; Not Available          ;
+; LVDS_E_3R                  ; 10 pF ; Not Available          ;
+; RSDS_E_3R                  ; 10 pF ; Not Available          ;
++----------------------------+-------+------------------------+
+Note: User assignments will override these defaults. The user specified values are listed in the Output Pins and Bidir Pins tables.
+
+
++-------------------------------------------------+
+; I/O Assignment Warnings                         ;
++-------------------+-----------------------------+
+; Pin Name          ; Reason                      ;
++-------------------+-----------------------------+
+; output_vector[0]  ; Missing location assignment ;
+; output_vector[1]  ; Missing location assignment ;
+; output_vector[2]  ; Missing location assignment ;
+; output_vector[3]  ; Missing location assignment ;
+; output_vector[4]  ; Missing location assignment ;
+; output_vector[5]  ; Missing location assignment ;
+; output_vector[6]  ; Missing location assignment ;
+; output_vector[7]  ; Missing location assignment ;
+; output_vector[8]  ; Missing location assignment ;
+; output_vector[9]  ; Missing location assignment ;
+; output_vector[10] ; Missing location assignment ;
+; output_vector[11] ; Missing location assignment ;
+; output_vector[12] ; Missing location assignment ;
+; output_vector[13] ; Missing location assignment ;
+; output_vector[14] ; Missing location assignment ;
+; output_vector[15] ; Missing location assignment ;
+; output_vector[16] ; Missing location assignment ;
+; input_vector[0]   ; Missing location assignment ;
+; input_vector[16]  ; Missing location assignment ;
+; input_vector[24]  ; Missing location assignment ;
+; input_vector[1]   ; Missing location assignment ;
+; input_vector[25]  ; Missing location assignment ;
+; input_vector[17]  ; Missing location assignment ;
+; input_vector[18]  ; Missing location assignment ;
+; input_vector[2]   ; Missing location assignment ;
+; input_vector[26]  ; Missing location assignment ;
+; input_vector[19]  ; Missing location assignment ;
+; input_vector[3]   ; Missing location assignment ;
+; input_vector[27]  ; Missing location assignment ;
+; input_vector[20]  ; Missing location assignment ;
+; input_vector[4]   ; Missing location assignment ;
+; input_vector[28]  ; Missing location assignment ;
+; input_vector[5]   ; Missing location assignment ;
+; input_vector[29]  ; Missing location assignment ;
+; input_vector[21]  ; Missing location assignment ;
+; input_vector[6]   ; Missing location assignment ;
+; input_vector[30]  ; Missing location assignment ;
+; input_vector[22]  ; Missing location assignment ;
+; input_vector[7]   ; Missing location assignment ;
+; input_vector[31]  ; Missing location assignment ;
+; input_vector[23]  ; Missing location assignment ;
+; input_vector[8]   ; Missing location assignment ;
+; input_vector[9]   ; Missing location assignment ;
+; input_vector[10]  ; Missing location assignment ;
+; input_vector[11]  ; Missing location assignment ;
+; input_vector[12]  ; Missing location assignment ;
+; input_vector[13]  ; Missing location assignment ;
+; input_vector[14]  ; Missing location assignment ;
+; input_vector[15]  ; Missing location assignment ;
++-------------------+-----------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                     ;
++-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+-------------+--------------+
+; Compilation Hierarchy Node  ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                                       ; Entity Name ; Library Name ;
++-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+-------------+--------------+
+; |DUT                        ; 204 (0)     ; 0            ; 0          ; 49   ; 0            ; 204 (0)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT                                                      ; DUT         ; work         ;
+;    |MAC:add_instance|       ; 204 (41)    ; 0            ; 0          ; 0    ; 0            ; 204 (41)     ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance                                     ; MAC         ; work         ;
+;       |BK_adder:bk_adder1|  ; 49 (0)      ; 0            ; 0          ; 0    ; 0            ; 49 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1                  ; BK_adder    ; work         ;
+;          |abcgate:C10|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C10      ; abcgate     ; work         ;
+;          |abcgate:C11|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C11      ; abcgate     ; work         ;
+;          |abcgate:C12|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C12      ; abcgate     ; work         ;
+;          |abcgate:C13|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C13      ; abcgate     ; work         ;
+;          |abcgate:C14|      ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C14      ; abcgate     ; work         ;
+;          |abcgate:C15|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C15      ; abcgate     ; work         ;
+;          |abcgate:C5|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C5       ; abcgate     ; work         ;
+;          |abcgate:C6|       ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C6       ; abcgate     ; work         ;
+;          |abcgate:C7|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C7       ; abcgate     ; work         ;
+;          |abcgate:C9|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:C9       ; abcgate     ; work         ;
+;          |abcgate:Cout|     ; 4 (4)       ; 0            ; 0          ; 0    ; 0            ; 4 (4)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:Cout     ; abcgate     ; work         ;
+;          |abcgate:G1_11_10| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_11_10 ; abcgate     ; work         ;
+;          |abcgate:G1_13_12| ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_13_12 ; abcgate     ; work         ;
+;          |abcgate:G1_1_0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_1_0   ; abcgate     ; work         ;
+;          |abcgate:G1_3_2|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_3_2   ; abcgate     ; work         ;
+;          |abcgate:G1_5_4|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_5_4   ; abcgate     ; work         ;
+;          |abcgate:G1_7_6|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_7_6   ; abcgate     ; work         ;
+;          |abcgate:G1_9_8|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G1_9_8   ; abcgate     ; work         ;
+;          |abcgate:G2_11_8|  ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G2_11_8  ; abcgate     ; work         ;
+;          |abcgate:G2_3_0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G2_3_0   ; abcgate     ; work         ;
+;          |abcgate:G2_7_4|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G2_7_4   ; abcgate     ; work         ;
+;          |abcgate:G3_7_0|   ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|abcgate:G3_7_0   ; abcgate     ; work         ;
+;          |xorgate:P0_0|     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:P0_0     ; xorgate     ; work         ;
+;          |xorgate:P0_2|     ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:P0_2     ; xorgate     ; work         ;
+;          |xorgate:S10|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S10      ; xorgate     ; work         ;
+;          |xorgate:S11|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S11      ; xorgate     ; work         ;
+;          |xorgate:S12|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S12      ; xorgate     ; work         ;
+;          |xorgate:S13|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S13      ; xorgate     ; work         ;
+;          |xorgate:S14|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S14      ; xorgate     ; work         ;
+;          |xorgate:S15|      ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S15      ; xorgate     ; work         ;
+;          |xorgate:S1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S1       ; xorgate     ; work         ;
+;          |xorgate:S2|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S2       ; xorgate     ; work         ;
+;          |xorgate:S3|       ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S3       ; xorgate     ; work         ;
+;          |xorgate:S4|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S4       ; xorgate     ; work         ;
+;          |xorgate:S5|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S5       ; xorgate     ; work         ;
+;          |xorgate:S6|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S6       ; xorgate     ; work         ;
+;          |xorgate:S7|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S7       ; xorgate     ; work         ;
+;          |xorgate:S8|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S8       ; xorgate     ; work         ;
+;          |xorgate:S9|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|BK_adder:bk_adder1|xorgate:S9       ; xorgate     ; work         ;
+;       |FA:fa10|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa10                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa10|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa10|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa11|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa11                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa11|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa11|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa12|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa12                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa12|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa12|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa13|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa13|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa14|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa14                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa14|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa14|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa15|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa15                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa15|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa15|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa16|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa16                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa16|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa16|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa17|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa17|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa18|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa18                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa18|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa18|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa19|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa19                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa19|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa19|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa1|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa1                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa1|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa1|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa20|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa20                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa20|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa20|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa21|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa21                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa21|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa21|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa22|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa22                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa22|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa22|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa23|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa23|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa24|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa24                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa24|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa24|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa25|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa25                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa25|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa25|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa26|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa26                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa26|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa26|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa27|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa27                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa27|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa27|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa28|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa28                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa28|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa28|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa29|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa29                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa29|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa29|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa2|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa2                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa2|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa2|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa30|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa30                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa30|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa30|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa31|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa31                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa31|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa31|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa32|             ; 3 (0)       ; 0            ; 0          ; 0    ; 0            ; 3 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa32                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa32|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa32|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa33|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa33                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa33|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa33|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa34|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa34                             ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa34|HA:ha1                      ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa34|orgate:o1                   ; orgate      ; work         ;
+;       |FA:fa35|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa35                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa35|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa35|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa36|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa36                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa36|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa36|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa37|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa37                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa37|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa37|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa38|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa38                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa38|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa38|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa39|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa39                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa39|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa39|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa3|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa3                              ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa3|HA:ha1                       ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa3|orgate:o1                    ; orgate      ; work         ;
+;       |FA:fa40|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa40                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa40|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa40|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa41|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa41                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa41|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa41|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa42|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa42                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa42|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa42|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa43|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa43                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa43|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa43|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa44|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa44                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa44|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa44|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa45|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa45                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa45|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa45|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa46|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa46                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa46|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa46|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa47|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa47                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa47|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa47|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa48|             ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa48                             ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa48|orgate:o1                   ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa48|xorgate:x1                  ; xorgate     ; work         ;
+;       |FA:fa4|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa4                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa4|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa4|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa5|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa5                              ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa5|HA:ha1                       ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa5|orgate:o1                    ; orgate      ; work         ;
+;       |FA:fa6|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa6                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa6|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa6|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa7|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa7                              ; FA          ; work         ;
+;          |HA:ha1|           ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa7|HA:ha1                       ; HA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa7|orgate:o1                    ; orgate      ; work         ;
+;       |FA:fa8|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa8                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa8|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa8|xorgate:x1                   ; xorgate     ; work         ;
+;       |FA:fa9|              ; 2 (0)       ; 0            ; 0          ; 0    ; 0            ; 2 (0)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa9                              ; FA          ; work         ;
+;          |orgate:o1|        ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa9|orgate:o1                    ; orgate      ; work         ;
+;          |xorgate:x1|       ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|FA:fa9|xorgate:x1                   ; xorgate     ; work         ;
+;       |HA:ha1|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha1                              ; HA          ; work         ;
+;       |HA:ha2|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha2                              ; HA          ; work         ;
+;       |HA:ha3|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha3                              ; HA          ; work         ;
+;       |HA:ha4|              ; 1 (1)       ; 0            ; 0          ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha4                              ; HA          ; work         ;
+;       |HA:ha5|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha5                              ; HA          ; work         ;
+;       |HA:ha7|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha7                              ; HA          ; work         ;
+;       |HA:ha8|              ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |DUT|MAC:add_instance|HA:ha8                              ; HA          ; work         ;
++-----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+-----------------------------------------------------------+-------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------+
+; Delay Chain Summary                          ;
++-------------------+----------+---------------+
+; Name              ; Pin Type ; Pad to Core 0 ;
++-------------------+----------+---------------+
+; output_vector[0]  ; Output   ; --            ;
+; output_vector[1]  ; Output   ; --            ;
+; output_vector[2]  ; Output   ; --            ;
+; output_vector[3]  ; Output   ; --            ;
+; output_vector[4]  ; Output   ; --            ;
+; output_vector[5]  ; Output   ; --            ;
+; output_vector[6]  ; Output   ; --            ;
+; output_vector[7]  ; Output   ; --            ;
+; output_vector[8]  ; Output   ; --            ;
+; output_vector[9]  ; Output   ; --            ;
+; output_vector[10] ; Output   ; --            ;
+; output_vector[11] ; Output   ; --            ;
+; output_vector[12] ; Output   ; --            ;
+; output_vector[13] ; Output   ; --            ;
+; output_vector[14] ; Output   ; --            ;
+; output_vector[15] ; Output   ; --            ;
+; output_vector[16] ; Output   ; --            ;
+; input_vector[0]   ; Input    ; (1)           ;
+; input_vector[16]  ; Input    ; (1)           ;
+; input_vector[24]  ; Input    ; (1)           ;
+; input_vector[1]   ; Input    ; (1)           ;
+; input_vector[25]  ; Input    ; (1)           ;
+; input_vector[17]  ; Input    ; (1)           ;
+; input_vector[18]  ; Input    ; (1)           ;
+; input_vector[2]   ; Input    ; (1)           ;
+; input_vector[26]  ; Input    ; (1)           ;
+; input_vector[19]  ; Input    ; (1)           ;
+; input_vector[3]   ; Input    ; (1)           ;
+; input_vector[27]  ; Input    ; (1)           ;
+; input_vector[20]  ; Input    ; (1)           ;
+; input_vector[4]   ; Input    ; (1)           ;
+; input_vector[28]  ; Input    ; (1)           ;
+; input_vector[5]   ; Input    ; (1)           ;
+; input_vector[29]  ; Input    ; (1)           ;
+; input_vector[21]  ; Input    ; (1)           ;
+; input_vector[6]   ; Input    ; (1)           ;
+; input_vector[30]  ; Input    ; (1)           ;
+; input_vector[22]  ; Input    ; (1)           ;
+; input_vector[7]   ; Input    ; (1)           ;
+; input_vector[31]  ; Input    ; (1)           ;
+; input_vector[23]  ; Input    ; (1)           ;
+; input_vector[8]   ; Input    ; (1)           ;
+; input_vector[9]   ; Input    ; (1)           ;
+; input_vector[10]  ; Input    ; (1)           ;
+; input_vector[11]  ; Input    ; (1)           ;
+; input_vector[12]  ; Input    ; (1)           ;
+; input_vector[13]  ; Input    ; (1)           ;
+; input_vector[14]  ; Input    ; (1)           ;
+; input_vector[15]  ; Input    ; (1)           ;
++-------------------+----------+---------------+
+
+
++--------------------------------------------+
+; Routing Usage Summary                      ;
++-----------------------+--------------------+
+; Routing Resource Type ; Usage              ;
++-----------------------+--------------------+
+; C4s                   ; 112 / 784 ( 14 % ) ;
+; Direct links          ; 17 / 888 ( 2 % )   ;
+; Global clocks         ; 0 / 4 ( 0 % )      ;
+; LAB clocks            ; 0 / 32 ( 0 % )     ;
+; LUT chains            ; 7 / 216 ( 3 % )    ;
+; Local interconnects   ; 237 / 888 ( 27 % ) ;
+; R4s                   ; 92 / 704 ( 13 % )  ;
++-----------------------+--------------------+
+
+
++---------------------------------------------------------------------------+
+; LAB Logic Elements                                                        ;
++--------------------------------------------+------------------------------+
+; Number of Logic Elements  (Average = 9.27) ; Number of LABs  (Total = 22) ;
++--------------------------------------------+------------------------------+
+; 1                                          ; 0                            ;
+; 2                                          ; 0                            ;
+; 3                                          ; 0                            ;
+; 4                                          ; 0                            ;
+; 5                                          ; 0                            ;
+; 6                                          ; 0                            ;
+; 7                                          ; 1                            ;
+; 8                                          ; 3                            ;
+; 9                                          ; 7                            ;
+; 10                                         ; 11                           ;
++--------------------------------------------+------------------------------+
+
+
++----------------------------------------------------------------------------+
+; LAB Signals Sourced                                                        ;
++---------------------------------------------+------------------------------+
+; Number of Signals Sourced  (Average = 9.27) ; Number of LABs  (Total = 22) ;
++---------------------------------------------+------------------------------+
+; 0                                           ; 0                            ;
+; 1                                           ; 0                            ;
+; 2                                           ; 0                            ;
+; 3                                           ; 0                            ;
+; 4                                           ; 0                            ;
+; 5                                           ; 0                            ;
+; 6                                           ; 0                            ;
+; 7                                           ; 1                            ;
+; 8                                           ; 3                            ;
+; 9                                           ; 7                            ;
+; 10                                          ; 11                           ;
++---------------------------------------------+------------------------------+
+
+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 5.09) ; Number of LABs  (Total = 22) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 0                            ;
+; 2                                               ; 0                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 5                            ;
+; 5                                               ; 10                           ;
+; 6                                               ; 4                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 1                            ;
++-------------------------------------------------+------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; LAB Distinct Inputs                                                         ;
++----------------------------------------------+------------------------------+
+; Number of Distinct Inputs  (Average = 10.00) ; Number of LABs  (Total = 22) ;
++----------------------------------------------+------------------------------+
+; 0                                            ; 0                            ;
+; 1                                            ; 0                            ;
+; 2                                            ; 0                            ;
+; 3                                            ; 0                            ;
+; 4                                            ; 0                            ;
+; 5                                            ; 0                            ;
+; 6                                            ; 0                            ;
+; 7                                            ; 1                            ;
+; 8                                            ; 2                            ;
+; 9                                            ; 6                            ;
+; 10                                           ; 6                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 4                            ;
+; 13                                           ; 1                            ;
++----------------------------------------------+------------------------------+
+
+
++-------------------------------------------------------------------------+
+; Fitter Device Options                                                   ;
++----------------------------------------------+--------------------------+
+; Option                                       ; Setting                  ;
++----------------------------------------------+--------------------------+
+; Enable user-supplied start-up clock (CLKUSR) ; Off                      ;
+; Enable device-wide reset (DEV_CLRn)          ; Off                      ;
+; Enable device-wide output enable (DEV_OE)    ; Off                      ;
+; Enable INIT_DONE output                      ; Off                      ;
+; Configuration scheme                         ; Passive Serial           ;
+; Reserve all unused pins                      ; As output driving ground ;
++----------------------------------------------+--------------------------+
+
+
++-----------------+
+; Fitter Messages ;
++-----------------+
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (119004): Automatically selected device 5M240ZM100C4 for design DUT
+Info (119005): Fitting design with smaller device may be possible, but smaller device must be specified
+Info (171003): Fitter is performing an Auto Fit compilation, which may decrease Fitter effort to reduce compilation time
+Warning (292013): Feature LogicLock is only available with a valid subscription license. You can purchase a software subscription to gain full access to this feature.
+Info (176444): Device migration not selected. If you intend to use device migration later, you may need to change the pin assignments as they may be incompatible with other devices
+    Info (176445): Device 5M160ZM100C4 is compatible
+    Info (176445): Device 5M570ZM100C4 is compatible
+Critical Warning (169085): No exact pin location assignment(s) for 49 pins of 49 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'DUT.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332144): No user constrained base clocks found in the design
+Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
+Warning (332068): No clocks defined in design.
+Info (332128): Timing requirements not specified -- optimizing circuit to achieve the following default global requirements
+    Info (332127): Assuming a default timing requirement
+Info (332159): No clocks to report
+Warning (332068): No clocks defined in design.
+Info (186079): Completed User Assigned Global Signals Promotion Operation
+Info (186079): Completed Auto Global Promotion Operation
+Info (176234): Starting register packing
+Info (186468): Started processing fast register assignments
+Info (186469): Finished processing fast register assignments
+Info (176235): Finished register packing
+Info (176214): Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
+    Info (176211): Number of I/O pins in group: 49 (unused VREF, 3.3V VCCIO, 32 input, 17 output, 0 bidirectional)
+        Info (176212): I/O standards used: 3.3-V LVTTL.
+Info (176215): I/O bank details before I/O pin placement
+    Info (176214): Statistics of I/O banks
+        Info (176213): I/O bank number 1 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  38 pins available
+        Info (176213): I/O bank number 2 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  41 pins available
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
+Info (170189): Fitter placement preparation operations beginning
+Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
+Info (170191): Fitter placement operations beginning
+Info (170137): Fitter placement was successful
+Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
+Info (170193): Fitter routing operations beginning
+Info (170195): Router estimated average interconnect usage is 17% of the available device resources
+    Info (170196): Router estimated peak interconnect usage is 17% of the available device resources in the region that extends from location X0_Y0 to location X8_Y5
+Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
+    Info (170201): Optimizations that may affect the design's routability were skipped
+    Info (170200): Optimizations that may affect the design's timing were skipped
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
+Info (11888): Total time spent on timing analysis during the Fitter is 0.04 seconds.
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
+Info (144001): Generated suppressed messages file C:/Intel/Quartus/EE671_VHDL/MAC_adder/output_files/DUT.fit.smsg
+Info: Quartus Prime Fitter was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 5331 megabytes
+    Info: Processing ended: Thu Aug 08 15:10:48 2024
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:00
+
+
++----------------------------+
+; Fitter Suppressed Messages ;
++----------------------------+
+The suppressed messages can be found in C:/Intel/Quartus/EE671_VHDL/MAC_adder/output_files/DUT.fit.smsg.
+
+
